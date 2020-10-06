@@ -1,0 +1,83 @@
+/* Souce code Available in Discription */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+  width: 100%;
+  height: 100vh;
+  background: url("./MountainLogin.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  padding: 3rem 7rem;
+  width: 50%;
+  height: 50vh;
+  background: rgba(0, 0, 0, 0.651);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.7rem;
+}
+
+.form-wrapper input {
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.7rem 0.3rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: white solid 0.2rem;
+  padding-bottom: 0.2rem;
+  transition: all 0.5s linear;
+}
+
+.form-wrapper input:focus {
+  border-bottom: rgb(0, 132, 255) solid.2rem;
+}
+
+.form-wrapper button {
+  color: white;
+  font-weight: 500;
+  font-size: 1.3rem;
+  width: 100%;
+  padding: 0.7rem 5rem;
+  background: rgb(9, 100, 204);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  transition: all 1s ease;
+}
+
+.form-wrapper button:hover {
+  background: rgb(5, 72, 134);
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 80%;
+  }
+  .form-wrapper {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0rem;
+    padding: 20rem 3rem;
+  }
+}
