@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background: url("https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=376&q=80");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.9rem;
+}
+.nav-container {
+  color: white;
+  background: #303030;
+  height: 10vh;
+}
+
+nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0rem;
+}
+.main {
+  font-size: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24rem;
+}
+nav h1 {
+  font-size: 2.7rem;
+  cursor: pointer;
+  user-select: none;
+  flex: 1;
+}
+
+.logo {
+  z-index: 1;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  user-select: none;
+  flex: 1;
+}
+
+.nav-links li {
+  padding: 0rem 1rem;
+  transition: all 0.5s ease;
+}
+
+.nav-links li:hover {
+  opacity: 0.7;
+}
+
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 80%;
+  }
+  .nav-links {
+    position: absolute;
+    height: 100vh;
+    background: #303030;
+    top: 0%;
+    width: 100%;
+    padding: 0rem;
+    margin: 0rem;
+    left: -100%;
+    transition: all 1s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 0rem;
+  }
+  .logo {
+    display: flex;
+  }
+  .icon {
+    display: block;
+    padding-top: 0.5rem;
+    font-size: 2rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  .nav-links.active {
+    left: 0%;
+  }
+}
