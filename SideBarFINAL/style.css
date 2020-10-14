@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  user-select: none;
+  letter-spacing: 0.2rem;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+body {
+  font-family: "Bree Serif", serif;
+  background: linear-gradient(rgba(55, 58, 88, 0.8), transparent),
+    url("./jerry-wang-0qmXPnZKeLU-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 100vh;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.icon {
+  display: none;
+}
+
+/* NavBar Section */
+
+.nav-container {
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  background: linear-gradient(to top right, #0099cc 0%, #cc33ff 100%);
+  color: white;
+  z-index: 1;
+}
+
+nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0rem;
+}
+
+nav .logo {
+  font-size: 1.9rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  user-select: none;
+  flex: 1;
+  z-index: 1;
+}
+
+nav .logo h1 {
+  letter-spacing: 0.4rem;
+  cursor: pointer;
+  background: linear-gradient(to top left, #ffffff 0%, #ff9933 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav .logo .main-icon {
+  font-size: 2.3rem;
+  margin-right: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+/* sidebar content here */
+
+.sidebar-container {
+  position: absolute;
+  width: 20%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0099cc 0%, #cc33ff 100%);
+  top: 0%;
+  left: -100%;
+  transition: all 0.5s linear;
+}
+
+.sidebar-container.active {
+  left: 0%;
+}
+
+.sidebar {
+  padding-top: 10vh;
+  /* margin-left: 25%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* align-items: center; */
+  height: inherit;
+  overflow: hidden;
+}
+
+.sidebar-links li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-links li {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.sidebar-links li:hover {
+  background: rgba(0, 0, 0, 0.178);
+}
+
+/* .sidebar-links li a {
+  min-height: 60vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.26);
+  padding: 1rem 0.5rem;
+  margin: 1rem 0.4rem;
+} */
+
+/* Mobile Responsive  */
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 60%;
+  }
+
+  /* mobile navbar  */
+
+  .nav-links li a span {
+    display: none;
+  }
+  .logo .main-icon {
+    font-size: 2rem;
+    color: white;
+  }
+  .logo .main-icon:hover {
+    color: lightcyan;
+  }
+  .logo h1 {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+    z-index: 1;
+  }
+  .nav-links li a .icon {
+    border-radius: 50%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    background: rgb(24, 160, 201);
+    display: block;
+    transition: all 0.6s ease;
+    margin-left: 1rem;
+  }
+  .nav-links li a .icon:hover {
+    background: white;
+    color: rgb(24, 115, 201);
+  }
+
+  /* sidebar mobile responsive */
+
+  .sidebar-container {
+    width: 100%;
+    height: 100vh;
+    transition: all 0.5s ease;
+  }
+  .sidebar-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
