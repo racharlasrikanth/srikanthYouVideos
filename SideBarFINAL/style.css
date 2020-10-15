@@ -17,15 +17,34 @@ a:hover {
   opacity: 0.7;
 }
 
+.content {
+  display: flex;
+  justify-content: center;
+  padding-top: 20rem;
+  padding-left: 19rem;
+  align-items: center;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 1rem;
+  font-size: 10rem;
+  background: linear-gradient(to top, #003399 0%, #111111 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 body {
   font-family: "Bree Serif", serif;
-  background: linear-gradient(rgba(55, 58, 88, 0.8), transparent),
+  background: linear-gradient(to top right, #99ffcc 0%, #ff99cc 100%);
+  width: 100%;
+  height: 100vh;
+  /* background: linear-gradient(rgba(55, 58, 88, 0.8), transparent),
     url("./jerry-wang-0qmXPnZKeLU-unsplash.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 80%;
-  height: 100vh;
+  height: 100vh; */
 }
 /*scroll bar color start
 html {
@@ -212,7 +231,9 @@ nav .logo .main-icon {
     background: white;
     color: rgb(24, 115, 201);
   }
-
+  .content {
+    display: none;
+  }
   /* sidebar mobile responsive */
 
   .sidebar-container {

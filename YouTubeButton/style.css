@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.youtube-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 7rem 0rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  user-select: none;
+  background: linear-gradient(to right, #99ffcc 0%, #ffcccc 100%);
+}
+
+.content button {
+  color: white;
+  font-size: 3.7rem;
+  font-weight: 600;
+  padding: 2.5rem 7.5rem;
+  border: none;
+  outline: none;
+  background: rgb(255, 0, 0);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.7s ease-in-out;
+  box-shadow: 0rem 0.1rem 0.1rem 0.1rem rgb(167, 167, 167);
+}
+
+.content button:focus {
+  background: rgb(221, 218, 218);
+  color: rgb(92, 91, 91);
+}
+
+.content button:focus:after {
+  content: "D";
+}
+
+.icon {
+  position: absolute;
+  color: gray;
+  font-size: 3rem;
+  top: 47%;
+  left: 63%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.content button:focus + .icon {
+  opacity: 1;
+}
+
+p {
+  font-size: 6rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(to right, #ff3300 0%, #0066ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
