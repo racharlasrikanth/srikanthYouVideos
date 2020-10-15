@@ -27,6 +27,27 @@ body {
   width: 80%;
   height: 100vh;
 }
+/*scroll bar color start
+html {
+  --scrollbarBG: #CFD8DC;
+  --thumbBG: #90A4AE;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+scroll bar color end*/
 
 html {
   font-size: 62.5%;
@@ -43,10 +64,13 @@ html {
   left: 0%;
   position: absolute;
   width: 100%;
-  height: 10vh;
+  min-height: 10vh;
   background: linear-gradient(to top right, #0099cc 0%, #cc33ff 100%);
   color: white;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav {
@@ -100,6 +124,10 @@ nav .logo .main-icon {
   top: 0%;
   left: -100%;
   transition: all 0.5s linear;
+}
+
+.sidebar:hover {
+  overflow-y: scroll;
 }
 
 .sidebar-container.active {
@@ -178,6 +206,7 @@ nav .logo .main-icon {
     display: block;
     transition: all 0.6s ease;
     margin-left: 1rem;
+    outline: none;
   }
   .nav-links li a .icon:hover {
     background: white;
